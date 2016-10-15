@@ -1,6 +1,6 @@
     var anim;
     var animData = {
-        container: document.getElementById('bodymovin'),
+        container: document.getElementById('nameElement'),
         renderer: 'svg',
         loop: true,
         autoplay: true,
