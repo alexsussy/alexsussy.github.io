@@ -1,9 +1,27 @@
 var nameElement = document.getElementById('name'),
     portElement = document.getElementById('portfolio');
 
-var nameANIM, portANIM;
+var nameANIM, portBUTTON;
 
 nameANIM = loadAnimation(nameElement, 'svg', true, true, name_data);
+portBUTTON = loadAnimation(portElement, 'svg', false, false, portfolio_data);
+
+
+portElement.addEventListener("mouseover", portOver);
+
+
+function buttonOut(ev) {
+    if (!checkIfChild(ev.target, button)) {
+      buttonAnim.setDirection(-1);
+      buttonAnim.play();
+      document.removeEventListener('mouseover', buttonOut);
+      button.addEventListener('mouseover', buttonOver);
+    }
+  }
+
+function portOver(){
+    portBUTTON.playSegments([0,45], true);
+}
 
 function loadAnimation(container, renderer, autoplay, loop, data) {
   var animData = {
