@@ -1,5 +1,8 @@
 var nameElement = document.getElementById('name'),
-    portElement = document.getElementById('portfolio');
+    portElement = document.getElementById('portfolio'),
+    blogElement = document.getElementById('blog'),
+    bioElement  = document.getElementById('bio');
+    
 
 var nameANIM, portBUTTON;
 
