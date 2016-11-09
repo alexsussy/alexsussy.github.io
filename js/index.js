@@ -1,30 +1,19 @@
 var nameElement = document.getElementById('name'),
     portElement = document.getElementById('portfolio'),
     blogElement = document.getElementById('blog'),
-    bioElement  = document.getElementById('bio');
+    bioElement  = document.getElementById('bio'),
+    contactElement  = document.getElementById('contact');
+
     
 
-var nameANIM, portBUTTON;
+var nameANIM, portBUTTON, blogBUTTON, bioBUTTON, contactBUTTON;
 
 nameANIM = loadAnimation(nameElement, 'svg', true, true, name_data);
 portBUTTON = loadAnimation(portElement, 'svg', false, false, portfolio_data);
+blogBUTTON = loadAnimation(blogElement, 'svg', false, false, portfolio_data);
+bioBUTTON = loadAnimation(bioElement, 'svg', false, false, portfolio_data);
+contactBUTTON = loadAnimation(contactElement, 'svg', false, false, portfolio_data);
 
-
-portElement.addEventListener("mouseover", portOver);
-
-
-function buttonOut(ev) {
-    if (!checkIfChild(ev.target, button)) {
-      buttonAnim.setDirection(-1);
-      buttonAnim.play();
-      document.removeEventListener('mouseover', buttonOut);
-      button.addEventListener('mouseover', buttonOver);
-    }
-  }
-
-function portOver(){
-    portBUTTON.playSegments([0,45], true);
-}
 
 function loadAnimation(container, renderer, autoplay, loop, data) {
   var animData = {

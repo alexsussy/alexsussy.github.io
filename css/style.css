@@ -1,6 +1,5 @@
 html {
     background-color: black;
-    
     background: url(1.gif) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -10,27 +9,58 @@ html {
       
 body{
 }
-
-
-#bio {
-    font-family: 'Quicksand', sans-serif;
-    text-align: center;
-    color: white;
-    border: 4px solid rgba(255, 255, 255, 0.5);
-}
         
 #name {
     position:relative;
+    max-width: 80%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 50%);
-    border: 4px solid rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, 80%);
+    border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+
+#bioTEXT {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    color: white;
+    transform: translate(0, 600%);
+    border: 4px solid rgba(255, 255, 255, 0.1);
 }
 
 #portfolio{
     position: absolute;
-    top: 120%;
-    left: 25%;
-    border: 4px solid rgba(255, 255, 255, 0.5);
+    max-width: 18%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+#blog{
+    position: absolute;
+    max-width: 18%;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, 50%);
+    border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+#bio{
+    position: absolute;
+    max-width: 18%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150%, 50%);
+    border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+#contact{
+    position: absolute;
+    max-width: 18%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-250%, 50%);
+    border: 4px solid rgba(255, 255, 255, 0.1);
 }
 
