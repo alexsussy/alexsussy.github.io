@@ -38,6 +38,17 @@ body{
     //border: 4px solid rgba(255, 255, 255, 0.1);
 }
 
+
+#games{
+    position: absolute;
+    max-width: 18%;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, 50%);
+    //border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+
 #bio{
     position: absolute;
     max-width: 18%;
