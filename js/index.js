@@ -6,39 +6,32 @@ var nameElement = document.getElementById('name'),
 
 var nameANIM, portBUTTON, blogBUTTON, bioBUTTON, contactBUTTON;
 
-nameANIM = loadAnimation(nameElement, 'svg', true, true, name_data);
+
+nameANIM = loadAnimation(nameElement, 'svg', true, false, name_data);
 portBUTTON = loadAnimation(portElement, 'svg', false, true, portfolio_data);
-blogBUTTON = loadAnimation(blogElement, 'svg', false, false, portfolio_data);
-bioBUTTON = loadAnimation(bioElement, 'svg', false, false, portfolio_data);
-contactBUTTON = loadAnimation(contactElement, 'svg', false, false, portfolio_data);
+blogBUTTON = loadAnimation(blogElement, 'svg', false, true, blog_data);
+bioBUTTON = loadAnimation(bioElement, 'svg', false, true, portfolio_data);
+contactBUTTON = loadAnimation(contactElement, 'svg', false, true, contact_data);
 
 portBUTTON.stop();
+blogBUTTON.stop();
+bioBUTTON.stop();
+contactBUTTON.stop();
 
-portElement.onmouseenter = portAnimate_Enter;
-portElement.onmouseleave = portAnimate_Exit;
-
+portElement.onmouseenter=
 function portAnimate_Enter(){
     portBUTTON.setSpeed(1);
     portBUTTON.setDirection(1);
-    portBUTTON.playSegments([[0,45],[46,300]],true);
+    portBUTTON.playSegments([[portBUTTON.currentFrame,45],[46,300]],false);
 }
 
+portElement.onmouseleave=
 function portAnimate_Exit(){
-    portBUTTON.setSpeed(2);
     portBUTTON.setDirection(-1);
-    portBUTTON.playSegments([portBUTTON.currentFrame,0], true);
-    portBUTTON.addEventListener('loopComplete', portLoopComplete);
+    portBUTTON.setSpeed(2);
+    portBUTTON.playSegments([[portBUTTON.currentFrame,0],[0,0]],false);
+    portBUTTON.goToAndStop(0);
 }
-
-function portLoopComplete(){
-    portBUTTON.removeEventListener('loopComplete', portLoopComplete);
-    portBUTTON.stop();
-}
-
-
-
-
-
 
 
 function loadAnimation(container, renderer, autoplay, loop, data) {
